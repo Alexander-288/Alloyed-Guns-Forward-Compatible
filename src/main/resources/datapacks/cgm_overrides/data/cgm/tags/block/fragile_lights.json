@@ -1,0 +1,158 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:redstone_lamp",
+    {
+      "id": "createaddition:small_light_connector",
+      "required": false
+    },
+    {
+      "id": "design_decor:brass_light",
+      "required": false
+    },
+    {
+      "id": "design_decor:copper_light",
+      "required": false
+    },
+    {
+      "id": "design_decor:zinc_light",
+      "required": false
+    },
+    {
+      "id": "design_decor:brass_floodlight",
+      "required": false
+    },
+    {
+      "id": "design_decor:copper_floodlight",
+      "required": false
+    },
+    {
+      "id": "design_decor:andesite_floodlight",
+      "required": false
+    },
+    {
+      "id": "design_decor:brass_lamp",
+      "required": false
+    },
+    {
+      "id": "design_decor:copper_lamp",
+      "required": false
+    },
+    {
+      "id": "design_decor:zinc_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:yellow_gold_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:red_gold_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:green_gold_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:blue_gold_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:yellow_andesite_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:red_andesite_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:green_andesite_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:blue_andesite_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:yellow_brass_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:red_brass_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:green_brass_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:blue_brass_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:yellow_cast_iron_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:red_cast_iron_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:green_cast_iron_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:blue_cast_iron_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:yellow_iron_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:red_iron_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:green_iron_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:blue_iron_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:yellow_copper_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:red_copper_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:green_copper_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:blue_copper_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:yellow_zinc_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:red_zinc_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:green_zinc_lamp",
+      "required": false
+    },
+    {
+      "id": "createdeco:blue_zinc_lamp",
+      "required": false
+    }
+  ]
+}

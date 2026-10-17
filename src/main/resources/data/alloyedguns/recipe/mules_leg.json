@@ -1,0 +1,29 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "tag": "c:stripped_logs",
+      "count": 2
+    },
+    {
+      "item": "create:brass_sheet",
+      "count": 2
+    },
+    {
+      "item": "create:sturdy_sheet",
+      "count": 3
+    },
+    {
+      "item": "create:cogwheel",
+      "count": 1
+    },
+    {
+      "item": "create:analog_lever",
+      "count": 1
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "alloyedguns:mules_leg"
+  }
+}

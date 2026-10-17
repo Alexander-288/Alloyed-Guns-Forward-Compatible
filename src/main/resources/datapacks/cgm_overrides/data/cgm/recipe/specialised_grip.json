@@ -1,0 +1,12 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "tag": "c:ingots/steel",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "cgm:specialised_grip"
+  }
+}

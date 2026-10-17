@@ -1,0 +1,29 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "tag": "c:stripped_logs",
+      "count": 1
+    },
+    {
+      "item": "create:brass_sheet",
+      "count": 1
+    },
+    {
+      "item": "create:sturdy_sheet",
+      "count": 4
+    },
+    {
+      "item": "create:cogwheel",
+      "count": 1
+    },
+    {
+      "item": "minecraft:lever",
+      "count": 1
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "alloyedguns:caplock_pistol"
+  }
+}

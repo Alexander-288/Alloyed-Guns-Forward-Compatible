@@ -1,0 +1,16 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "tag": "c:plates/steel",
+      "count": 2
+    },
+    {
+      "tag": "c:ingots/steel",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "cgm:tactical_stock"
+  }
+}

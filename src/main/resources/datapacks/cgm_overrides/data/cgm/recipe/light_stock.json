@@ -1,0 +1,12 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "tag": "c:plates/steel",
+      "count": 3
+    }
+  ],
+  "result": {
+    "id": "cgm:light_stock"
+  }
+}

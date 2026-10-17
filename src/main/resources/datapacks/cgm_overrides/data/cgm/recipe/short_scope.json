@@ -1,0 +1,16 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "create:framed_glass_pane",
+      "count": 1
+    },
+    {
+      "tag": "c:plates/steel",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "cgm:short_scope"
+  }
+}

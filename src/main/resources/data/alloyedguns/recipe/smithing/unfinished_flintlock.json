@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:crossbow"
+    },
+    {
+      "item": "alloyedguns:small_iron_pipe"
+    }
+  ],
+  "result": {
+    "id": "alloyedguns:unfinished_flintlock"
+  }
+}

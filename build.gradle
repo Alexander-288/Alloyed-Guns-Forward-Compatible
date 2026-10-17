@@ -1,154 +1,101 @@
-//import groovy.json.JsonOutput
-//import groovy.json.JsonSlurper
-
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
-        maven { url = 'https://repo.spongepowered.org/maven' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
-    }
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+    id 'idea'
 }
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'maven-publish'
-apply plugin: 'org.spongepowered.mixin'
 
-version = "1.0.2-1.18.2"
-group = "com.mrcrayfish"
-archivesBaseName = "alloyedguns"
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+version = "${mod_version}+${minecraft_version}"
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 repositories {
-    maven {
-        name = 'tterrag maven'
-        url = 'https://maven.tterrag.com/'
+    // CGM-Unofficial jar goes in ./libs (see README)
+    flatDir { dirs 'libs' }
+    exclusiveContent {
+        forRepository { maven { url 'https://www.cursemaven.com' } }
+        filter { includeGroup 'curse.maven' }
+    }
+    exclusiveContent {
+        forRepository { maven { url 'https://api.modrinth.com/maven' } }
+        filter { includeGroup 'maven.modrinth' }
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+neoForge {
+    version = project.neo_version
 
-mixin {
-    add sourceSets.main, "alloyedguns.refmap.json"
-}
-
-minecraft {
-    mappings channel: 'official', version: '1.18.2'
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
 
     runs {
         client {
-            workingDirectory project.file('run')
-            property 'mixin.env.disableRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
-            arg '-mixin.config=alloyedguns.mixins.json'
-            mods {
-                alloyedguns {
-                    source sourceSets.main
-                }
-            }
+            client()
         }
-
         server {
-            workingDirectory project.file('run')
-            property 'mixin.env.disableRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
-            arg '-mixin.config=alloyedguns.mixins.json'
-            mods {
-                alloyedguns {
-                    source sourceSets.main
-                }
-            }
+            server()
+            programArgument '--nogui'
         }
+        // Headless check that all data loads (no EULA needed)
+        gameTestServer {
+            type = "gameTestServer"
+        }
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.INFO
+        }
+    }
 
-        data {
-            workingDirectory project.file('run')
-            property 'mixin.env.disableRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
-            args '--mod', 'alloyedguns', '--all', '--output', file('src/generated/resources/')
-            arg '-mixin.config=alloyedguns.mixins.json'
-            mods {
-                alloyedguns {
-                    source sourceSets.main
-                }
-            }
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
         }
     }
 }
 
-//processResources {
-//    doLast {
-//        fileTree(dir: outputs.files.asPath, include: "**/*.json").each {
-//            File file -> file.text = JsonOutput.toJson(new JsonSlurper().parse(file))
-//        }
-//    }
-//}
-
-repositories {
-    mavenLocal()
-    maven {
-        url "https://www.cursemaven.com"
-    }
-    maven {
-        name "Progwml6 maven"
-        url "https://dvs1.progwml6.com/files/maven/"
-    }
-    maven {
-        name "ModMaven"
-        url "https://modmaven.k-4u.nl"
-    }
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.60'
-    implementation fg.deobf('curse.maven:framework-549225:3723144')
-    implementation fg.deobf('curse.maven:configured-457570:3721946')
-    implementation fg.deobf('curse.maven:catalogue-459701:3721991')
-    implementation fg.deobf('curse.maven:backpacked-352835:3723045')
-    compileOnly fg.deobf('curse.maven:controllable-317269:3707285')
-    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.171:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.171")
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    implementation fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
-    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}")
-    implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
-    implementation fg.deobf("curse.maven:alloyed-564792:3943197")
+    implementation "blank:CGM-Unofficial:${cgm_version}"
+    implementation "curse.maven:framework-549225:${framework_file_id}"
+
+    // Create is only needed at runtime (recipes are data only)
+    localRuntime "maven.modrinth:create:${create_version}"
+    // Any steel provider works; Alloyed is only used for testing the c: tags
+    localRuntime "maven.modrinth:create-alloyed:${alloyed_version}"
 }
 
-jar {
-    manifest {
-        attributes([
-            "Specification-Title": "Alloyed Guns",
-            "Specification-Vendor": "MrCrayfish and End_Rage",
-            "Specification-Version": "1",
-            "Implementation-Title": "Gun Mod",
-            "Implementation-Version": project.version,
-            "Implementation-Vendor" : "MrCrayfish and End_Rage",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-            "MixinConfigs": "alloyedguns.mixins.json"
-        ])
-    }
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
 }
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
 
-jar.finalizedBy('reobfJar')
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
-    repositories {
-        maven {
-            url "file:///X:/localmaven/mcmods"
-        }
-    }
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
 }

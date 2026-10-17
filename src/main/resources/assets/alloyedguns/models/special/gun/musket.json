@@ -2,7 +2,7 @@
 	"credit": "Model By End_Rage",
 	"textures": {
 		"3": "alloyedguns:items/musket",
-		"particle": "alloyedguns:items/weighted_stock"
+		"particle": "cgm:items/weighted_stock"
 	},
 	"elements": [
 		{
