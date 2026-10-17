@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:copper_ingot"
+    },
+    "X": {
+      "item": "create:andesite_alloy"
+    }
+  },
+  "result": {
+    "id": "alloyedguns:compressed_air_canister"
+  }
+}

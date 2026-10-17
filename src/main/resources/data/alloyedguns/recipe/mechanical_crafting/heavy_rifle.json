@@ -1,0 +1,34 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "L": {
+      "tag": "c:plates/steel"
+    },
+    "R": {
+      "item": "alloyedguns:small_steel_pipe"
+    },
+    "S": {
+      "tag": "c:ingots/steel"
+    },
+    "C": {
+      "item": "alloyedguns:complex_gun_kit"
+    },
+    "V": {
+      "item": "minecraft:crossbow"
+    },
+    "A": {
+      "item": "alloyedguns:advanced_gun_kit"
+    }
+  },
+  "pattern": [
+    "    SS   ",
+    "LRRRRRRRR",
+    "L CVLLA L"
+  ],
+  "result": {
+    "id": "cgm:heavy_rifle"
+  },
+  "show_notification": false
+}

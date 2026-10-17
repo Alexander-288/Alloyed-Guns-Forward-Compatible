@@ -1,0 +1,16 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "tag": "c:plates/steel",
+      "count": 1
+    },
+    {
+      "tag": "c:ingots/steel",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "cgm:light_grip"
+  }
+}

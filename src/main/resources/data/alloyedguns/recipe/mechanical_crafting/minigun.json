@@ -1,0 +1,33 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "J": {
+      "item": "create:copper_backtank"
+    },
+    "R": {
+      "item": "cgm:assault_rifle"
+    },
+    "S": {
+      "item": "create:mechanical_bearing"
+    },
+    "C": {
+      "item": "alloyedguns:complex_gun_kit"
+    },
+    "V": {
+      "item": "minecraft:crossbow"
+    },
+    "A": {
+      "item": "alloyedguns:advanced_gun_kit"
+    }
+  },
+  "pattern": [
+    "AVCRR",
+    " JSRR"
+  ],
+  "result": {
+    "id": "cgm:mini_gun"
+  },
+  "show_notification": false
+}

@@ -1,0 +1,16 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "minecraft:oak_planks",
+      "count": 2
+    },
+    {
+      "tag": "c:ingots/steel",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "cgm:weighted_stock"
+  }
+}

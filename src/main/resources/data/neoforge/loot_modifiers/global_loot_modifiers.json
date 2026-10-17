@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "entries": [
+    "alloyedguns:bastion_bridge",
+    "alloyedguns:bastion_other",
+    "alloyedguns:bastion_treasure",
+    "alloyedguns:pillager_outpost",
+    "alloyedguns:woodland_mansion"
+  ]
+}

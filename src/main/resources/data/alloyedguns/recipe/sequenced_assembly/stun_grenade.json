@@ -1,0 +1,49 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "alloyedguns:gunpowder_bottle"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "cgm:stun_grenade"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "alloyedguns:gunpowder_bottle"
+        },
+        {
+          "tag": "c:strings"
+        }
+      ],
+      "results": [
+        {
+          "id": "alloyedguns:harmless_grenade"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "alloyedguns:harmless_grenade"
+        },
+        {
+          "tag": "c:dusts/glowstone"
+        }
+      ],
+      "results": [
+        {
+          "id": "alloyedguns:harmless_grenade"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "alloyedguns:harmless_grenade"
+  }
+}

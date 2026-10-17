@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "alloyedguns:complex_gun_kit",
+          "weight": 12
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 89
+        }
+      ]
+    }
+  ]
+}

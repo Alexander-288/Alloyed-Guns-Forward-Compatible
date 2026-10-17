@@ -1,0 +1,16 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "minecraft:spyglass",
+      "count": 1
+    },
+    {
+      "tag": "c:plates/steel",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "cgm:long_scope"
+  }
+}

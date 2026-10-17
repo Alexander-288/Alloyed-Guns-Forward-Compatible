@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass_bottle"
+    },
+    "X": {
+      "tag": "c:gunpowders"
+    }
+  },
+  "result": {
+    "id": "alloyedguns:gunpowder_bottle"
+  }
+}

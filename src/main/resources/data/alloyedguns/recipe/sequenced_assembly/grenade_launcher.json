@@ -1,0 +1,65 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "alloyedguns:flintlock"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "cgm:grenade_launcher"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "alloyedguns:flintlock"
+        },
+        {
+          "item": "alloyedguns:small_steel_pipe"
+        }
+      ],
+      "results": [
+        {
+          "id": "alloyedguns:unfinished_grenade_launcher"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "alloyedguns:unfinished_grenade_launcher"
+        },
+        {
+          "tag": "c:plates/steel"
+        }
+      ],
+      "results": [
+        {
+          "id": "alloyedguns:unfinished_grenade_launcher"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "alloyedguns:unfinished_grenade_launcher"
+        },
+        {
+          "item": "alloyedguns:complex_gun_kit"
+        }
+      ],
+      "results": [
+        {
+          "id": "alloyedguns:unfinished_grenade_launcher"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "alloyedguns:unfinished_grenade_launcher"
+  }
+}

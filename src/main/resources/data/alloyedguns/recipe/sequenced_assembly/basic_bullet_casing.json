@@ -1,0 +1,47 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:brass_sheet"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "alloyedguns:basic_bullet_casing",
+      "count": 4
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create:brass_sheet"
+        },
+        {
+          "tag": "c:dusts/redstone"
+        }
+      ],
+      "results": [
+        {
+          "id": "create:brass_sheet"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "create:brass_sheet"
+        }
+      ],
+      "results": [
+        {
+          "id": "create:brass_sheet"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create:brass_sheet"
+  }
+}

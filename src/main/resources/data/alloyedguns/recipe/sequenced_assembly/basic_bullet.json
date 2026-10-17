@@ -1,0 +1,62 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "alloyedguns:basic_bullet_casing"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "cgm:basic_bullet"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "alloyedguns:basic_bullet_casing"
+        },
+        {
+          "tag": "c:gunpowders"
+        }
+      ],
+      "results": [
+        {
+          "id": "alloyedguns:incomplete_basic_bullet"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "alloyedguns:incomplete_basic_bullet"
+        },
+        {
+          "tag": "c:nuggets/zinc"
+        }
+      ],
+      "results": [
+        {
+          "id": "alloyedguns:incomplete_basic_bullet"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "alloyedguns:incomplete_basic_bullet"
+        }
+      ],
+      "results": [
+        {
+          "id": "cgm:basic_bullet"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "alloyedguns:incomplete_basic_bullet"
+  }
+}
