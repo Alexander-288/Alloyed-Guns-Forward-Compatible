@@ -1,49 +1,32 @@
 {
-	"credit": "End_Rage waz here",
-	"textures": {
-		"0": "cgm:items/vertical_grip",
-		"particle": "cgm:items/vertical_grip"
-	},
-	"elements": [
-		{
-			"from": [7.5, -1, 6],
-			"to": [8.5, 1.5, 7],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2.5, 13]},
-			"faces": {
-				"north": {"uv": [0, 0, 1, 2.5], "texture": "#0"},
-				"east": {"uv": [0, 0, 1, 2.5], "texture": "#0"},
-				"south": {"uv": [0, 0, 1, 2.5], "texture": "#0"},
-				"west": {"uv": [0, 0, 1, 2.5], "texture": "#0"},
-				"up": {"uv": [0, 0, 1, 1], "texture": "#0"},
-				"down": {"uv": [0, 0, 1, 1], "texture": "#0"}
-			}
-		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"translation": [0, 7, 0.5]
-		},
-		"thirdperson_lefthand": {
-			"translation": [0, 7, 0.5]
-		},
-		"firstperson_righthand": {
-			"translation": [0, 9, 2.75]
-		},
-		"firstperson_lefthand": {
-			"translation": [0, 9, 2.75]
-		},
-		"ground": {
-			"translation": [0, 3.75, 0]
-		},
-		"gui": {
-			"rotation": [-7, -111, 0],
-			"translation": [-4, 22.25, 0],
-			"scale": [3, 3, 3]
-		},
-		"fixed": {
-			"rotation": [0, 90, 0],
-			"translation": [0.75, 12.25, 0.25],
-			"scale": [2, 2, 2]
-		}
-	}
+  "credit": "End_Rage waz here",
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "0": "cgm:items/2d_textures/specialised_grip",
+    "particle": "cgm:items/2d_textures/specialised_grip"
+  },
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "cgm:item/specialised_grip_3d"
+  },
+  "perspectives": {
+    "firstperson_righthand": {
+      "parent": "cgm:item/specialised_grip_2d"
+    },
+    "firstperson_lefthand": {
+      "parent": "cgm:item/specialised_grip_2d"
+    },
+    "thirdperson_righthand": {
+      "parent": "cgm:item/specialised_grip_2d"
+    },
+    "thirdperson_lefthand": {
+      "parent": "cgm:item/specialised_grip_2d"
+    },
+    "gui": {
+      "parent": "cgm:item/specialised_grip_2d"
+    },
+    "ground": {
+      "parent": "cgm:item/specialised_grip_2d"
+    }
+  }
 }

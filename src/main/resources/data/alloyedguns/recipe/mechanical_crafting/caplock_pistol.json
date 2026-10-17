@@ -1,0 +1,31 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "L": {
+      "tag": "c:stripped_logs"
+    },
+    "S": {
+      "item": "create:sturdy_sheet"
+    },
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "R": {
+      "item": "minecraft:lever"
+    },
+    "C": {
+      "item": "create:cogwheel"
+    }
+  },
+  "pattern": [
+    "SSBR",
+    "SSCL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "alloyedguns:caplock_pistol"
+  },
+  "show_notification": false
+}

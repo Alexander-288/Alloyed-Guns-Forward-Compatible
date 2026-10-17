@@ -1,59 +1,54 @@
 {
-  "general": {
-    "auto": true,
-    "rate": 3,
-    "gripType": "cgm:two_handed",
-    "maxAmmo": 32,
-    "reloadAmount": 4,
-    "recoilAngle": 3.0,
-    "recoilKick": 0.25,
-    "spread": 4.0
-  },
-  "projectile": {
-    "item": "cgm:basic_bullet",
-    "damage": 7.0,
-    "size": 0.2,
-    "speed": 10.0,
-    "life": 25
-  },
-  "sounds": {
-    "fire": "cgm:item.assault_rifle.fire",
-    "reload": "cgm:item.pistol.reload",
-    "cock": "cgm:item.assault_rifle.cock",
-    "silencedFire": "cgm:item.assault_rifle.silenced_fire",
-    "enchantedFire": "cgm:item.assault_rifle.enchanted_fire"
-  },
   "display": {
     "flash": {
-      "yOffset": 3.0,
-      "zOffset": -7
+      "yOffset": 3.8365,
+      "zOffset": -10.21
     }
   },
+  "general": {
+    "gripType": "cgm:two_handed",
+    "maxAmmo": 10,
+    "rate": 16,
+    "recoilAdsReduction": 0.5,
+    "recoilAngle": 12.0,
+    "recoilKick": 1.5,
+    "reloadAmount": 1,
+    "spread": 4.0
+  },
   "modules": {
-    "zoom": {
-      "yOffset": 4.7,
-      "zOffset": 5.0,
-      "fovModifier": 0.6
-    },
     "attachments": {
+      "barrel": {
+        "scale": 0.44999998807907104,
+        "yOffset": 3.8365,
+        "zOffset": -10.2
+      },
       "scope": {
         "yOffset": 4.3,
-        "zOffset": 5.3,
-        "scale": 1.0
-      },
-      "barrel": {
-        "yOffset": 2.25,
-        "zOffset": -9.0,
-        "scale": 1.0
-      },
-      "stock": {
-        "yOffset": 7.7,
-        "zOffset": -0.4
+        "zOffset": 3.3
       },
       "underBarrel": {
-        "yOffset": 8.75,
-        "zOffset": 0.0
+        "yOffset": 2.63,
+        "zOffset": -0.5
       }
+    },
+    "zoom": {
+      "fovModifier": 0.7
     }
+  },
+  "projectile": {
+    "damage": 10.0,
+    "gravity": true,
+    "item": "cgm:advanced_bullet",
+    "life": 40,
+    "size": 0.3,
+    "speed": 8.0,
+    "damageReduceOverLife": true
+  },
+  "sounds": {
+    "cock": "cgm:item.rifle.cock",
+    "enchantedFire": "cgm:item.rifle.enchanted_fire",
+    "fire": "cgm:item.rifle.fire",
+    "reload": "cgm:item.pistol.reload",
+    "silencedFire": "cgm:item.rifle.silenced_fire"
   }
 }

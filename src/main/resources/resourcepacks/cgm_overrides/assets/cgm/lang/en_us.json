@@ -1,4 +1,20 @@
 {
-  "item.cgm.assault_rifle": "Automatic Rifle",
-  "itemGroup.cgm": "Alloyed Guns"
+  "item.cgm.assault_rifle": "Lever Action Rifle",
+  "itemGroup.cgm": "Alloyed Guns",
+  "block.cgm.workbench": "Gun Workbench",
+  "item.cgm.shotgun": "Double Barrel Shotgun",
+  "item.cgm.rifle": "Bolt Action Rifle",
+  "item.cgm.grenade_launcher": "Revolver",
+  "item.cgm.bazooka": "Shoulder Cannon",
+  "item.cgm.mini_gun": "Portable Gatling Gun",
+  "item.cgm.machine_pistol": "Semi-Automatic Pistol",
+  "item.cgm.heavy_rifle": "Breach-Loaded Rifle",
+  "item.cgm.basic_bullet": "Small Bullet",
+  "item.cgm.advanced_bullet": "Large Bullet",
+  "item.cgm.missile": "Explosive Shot",
+  "item.cgm.grenade": "Dynamite",
+  "item.cgm.short_scope": "Short Sight",
+  "item.cgm.tactical_stock": "Wooden Stock",
+  "item.cgm.light_grip": "Angled Foregrip",
+  "item.cgm.specialised_grip": "Pistol Foregrip"
 }

@@ -1,37 +1,30 @@
 {
+  "display": {
+    "flash": {
+      "size": 2.0,
+      "yOffset": 4.3,
+      "zOffset": -8.01
+    }
+  },
   "general": {
-    "rate": 80,
     "gripType": "cgm:bazooka",
     "maxAmmo": 1,
-    "recoilAngle": 10.0,
-    "recoilDurationOffset": 0.25
+    "rate": 100,
+    "recoilAngle": 15.0,
+    "recoilDurationOffset": 0.4,
+    "recoilKick": 4.0
   },
   "projectile": {
-    "item": "cgm:missile",
-    "visible": true,
     "damage": 25.0,
+    "item": "cgm:missile",
+    "gravity": true,
+    "life": 125,
     "size": 0.2,
     "speed": 4.0,
-    "life": 500,
-    "gravity": true
+    "visible": true
   },
   "sounds": {
     "fire": "cgm:item.bazooka.fire",
-    "reload": "minecraft:item.bottle.fill_dragonbreath"
-  },
-  "display": {
-    "flash": {
-      "yOffset": 4.3,
-      "zOffset": -8.01,
-      "size": 2.0
-    }
-  },
-  "modules": {
-    "zoom": {
-      "xOffset": 3.5,
-      "yOffset": 4.3,
-      "zOffset": 16.0,
-      "fovModifier": 0.5
-    }
+    "reload": "cgm:item.pistol.reload"
   }
 }

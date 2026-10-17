@@ -15,6 +15,11 @@ public class ModItems
     public static final DeferredItem<GunItem> MUSKET = ITEMS.register("musket", () -> new GunItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<GunItem> FLINTLOCK = ITEMS.register("flintlock", () -> new GunItem(new Item.Properties().stacksTo(1)));
 
+    // Guns from the Create Guns pack, rendered from their plain item models
+    public static final DeferredItem<GunItem> CAPLOCK_PISTOL = ITEMS.register("caplock_pistol", () -> new GunItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<GunItem> MULES_LEG = ITEMS.register("mules_leg", () -> new GunItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<GunItem> SAWED_OFF = ITEMS.register("sawed_off", () -> new GunItem(new Item.Properties().stacksTo(1)));
+
     // Unfinished guns
     public static final DeferredItem<AmmoItem> UNFINISHED_ASSAULT_RIFLE = ammo("unfinished_assault_rifle", 1);
     public static final DeferredItem<AmmoItem> UNFINISHED_FLINTLOCK = ammo("unfinished_flintlock", 1);

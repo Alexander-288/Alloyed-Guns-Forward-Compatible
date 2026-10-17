@@ -2,19 +2,19 @@
     "cgm:weapon": {
         "attachments": {
             "scope": {
-                "translation": [8.0, 3.7, 13.5],
-                "scale": [1, 1, 1]
+                "translation": [8.0, 5.0, 9.75],
+                "scale": [1.0, 1.0, 1.0]
             },
             "stock": {
-                "translation": [8.0, 8.0, 8.0]
+                "translation": [8.0, 1.0834, 18.6215]
             }
         },
         "ironSight": {
-            "camera": [8.0, 4.0, 18.0],
-            "viewportFov": 60.0
+            "camera": [8.0, 5.0, 24.0],
+            "viewportFov": 45.0
         },
         "muzzleFlash": {
-            "translation": [8.0, 3.0, -2.0],
+            "translation": [8.0, 3.75, -6.5],
             "scale": [1.0, 1.0, 1.0]
         }
     }

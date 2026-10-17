@@ -1,6 +1,23 @@
 {
-  "parent": "minecraft:item/generated",
+  "credit": "End_Rage waz here",
+  "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "cgm:items/stun_grenade"
+    "0": "cgm:items/2d_textures/stun_grenade",
+    "particle": "cgm:items/2d_textures/stun_grenade"
+  },
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "cgm:item/stun_grenade_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "cgm:item/stun_grenade_2d"
+    },
+    "ground": {
+      "parent": "cgm:item/stun_grenade_2d"
+    },
+    "fixed": {
+      "parent": "cgm:item/stun_grenade_2d"
+    }
   }
 }

@@ -1,109 +1,32 @@
 {
-	"credit": "Made with Blockbench",
-	"texture_size": [8, 8],
-	"textures": {
-		"0": "cgm:items/short_scope",
-		"1": "cgm:items/medium_scope_overlay",
-		"particle": "cgm:items/short_scope"
-	},
-	"elements": [
-		{
-			"from": [7.25, 7.875, 5.25],
-			"to": [8.75, 8.875, 7.75],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.525, 5.125]},
-			"faces": {
-				"north": {"uv": [3, 3, 6, 5], "texture": "#0"},
-				"east": {"uv": [2, 3, 0, 8], "rotation": 90, "texture": "#0"},
-				"south": {"uv": [2, 4, 0, 7], "rotation": 90, "texture": "#0"},
-				"west": {"uv": [2, 8, 0, 3], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [0, 8, 3, 3], "texture": "#0"}
-			}
-		},
-		{
-			"from": [7.25, 8.875, 7.5],
-			"to": [8.75, 10.375, 8.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9.625, 5.825]},
-			"faces": {
-				"east": {"uv": [2, 0, 0, 3], "texture": "#0"},
-				"west": {"uv": [0, 0, 2, 3], "texture": "#0"},
-				"up": {"uv": [2, 3, 4, 0], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [6, 3, 4, 0], "rotation": 90, "texture": "#0"}
-			}
-		},
-		{
-			"from": [7.25, 8.875, 4.5],
-			"to": [8.75, 10.375, 7.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9.625, 5.825]},
-			"faces": {
-				"east": {"uv": [12, 0, 6, 3], "texture": "#0"},
-				"west": {"uv": [6, 0, 12, 3], "texture": "#0"},
-				"up": {"uv": [6, 3, 12, 0], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [12, 3, 6, 0], "rotation": 90, "texture": "#0"}
-			}
-		},
-		{
-			"from": [7.25, 8.875, 6.975],
-			"to": [8.75, 10.375, 7],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7.25, 8.375, 3.325]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0}
-			}
-		},
-		{
-			"name": "cube inverted",
-			"from": [8.749, 10.374, 8.5],
-			"to": [7.251, 8.876, 7.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9.625, 8.075]},
-			"faces": {
-				"east": {"uv": [0, 3, 2, 0], "texture": "#0"},
-				"west": {"uv": [2, 3, 0, 0], "texture": "#0"},
-				"up": {"uv": [6, 0, 4, 3], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [2, 0, 4, 3], "rotation": 90, "texture": "#0"}
-			}
-		},
-		{
-			"name": "cube inverted",
-			"from": [8.749, 10.374, 7.5],
-			"to": [7.251, 8.876, 4.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9.625, 8.075]},
-			"faces": {
-				"east": {"uv": [6, 3, 12, 0], "texture": "#0"},
-				"west": {"uv": [12, 3, 6, 0], "texture": "#0"},
-				"up": {"uv": [12, 0, 6, 3], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [6, 0, 12, 3], "rotation": 90, "texture": "#0"}
-			}
-		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [15, 0, 0],
-			"translation": [0, -0.25, 0],
-			"scale": [1.5, 1.5, 1.5]
-		},
-		"thirdperson_lefthand": {
-			"translation": [0, 0, 3]
-		},
-		"firstperson_righthand": {
-			"translation": [-2.5, 3.5, 3],
-			"scale": [1.5, 1.5, 1.5]
-		},
-		"firstperson_lefthand": {
-			"translation": [0, 0, 3.5]
-		},
-		"ground": {
-			"translation": [0, -3, 0],
-			"scale": [2, 2, 2]
-		},
-		"gui": {
-			"rotation": [30, 225, 0],
-			"translation": [-3, -2.5, 0],
-			"scale": [3, 3, 3]
-		},
-		"fixed": {
-			"rotation": [0, 90, 0],
-			"translation": [0, -3.75, -2],
-			"scale": [3, 3, 3]
-		}
-	}
+  "credit": "End_Rage waz here",
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "0": "cgm:items/2d_textures/medium_scope",
+    "particle": "cgm:items/2d_textures/medium_scope"
+  },
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "cgm:item/medium_scope_3d"
+  },
+  "perspectives": {
+    "firstperson_righthand": {
+      "parent": "cgm:item/medium_scope_2d"
+    },
+    "firstperson_lefthand": {
+      "parent": "cgm:item/medium_scope_2d"
+    },
+    "thirdperson_righthand": {
+      "parent": "cgm:item/medium_scope_2d"
+    },
+    "thirdperson_lefthand": {
+      "parent": "cgm:item/medium_scope_2d"
+    },
+    "gui": {
+      "parent": "cgm:item/medium_scope_2d"
+    },
+    "ground": {
+      "parent": "cgm:item/medium_scope_2d"
+    }
+  }
 }

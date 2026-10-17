@@ -2,7 +2,7 @@
 
 Create-themed guns, ammo and crafting for MrCrayfish's Gun Mod, ported to Minecraft 1.21.1 on NeoForge.
 
-This is a port of End_Rage's Alloyed Guns 1.1.0 (1.19.2). It is an addon: it adds the flintlock and musket, gun kits, casings and unfinished guns, and changes CGM's guns, stats and recipes to be made with Create.
+This is a port of End_Rage's Alloyed Guns 1.1.0 (1.19.2), with the look of End_Rage's later Create Guns 1.2.2 pack. It is an addon: it adds the flintlock, musket, caplock pistol, Mule's Leg and sawed-off shotgun, plus gun kits, casings and unfinished guns, and changes CGM's guns, stats and recipes to be made with Create.
 
 ## Requirements
 
@@ -18,6 +18,9 @@ This is a port of End_Rage's Alloyed Guns 1.1.0 (1.19.2). It is an addon: it add
 - Smithing recipes (flintlock, musket and their unfinished parts) are now shapeless crafting recipes, because 1.21 smithing needs a template item.
 - Gun kits in chest loot are added with loot modifiers instead of replacing the vanilla chest tables.
 - The CGM reskin and CGM recipe/stat changes ship as built-in packs that are always on.
+- CGM's guns use the Create Guns 1.2.2 models, names and stats (for example the grenade launcher is now a revolver). The Alloyed Guns recipes are kept.
+- The pack's caplock pistol, Mule's Leg and sawed-off are real items now instead of NBT variants of CGM guns.
+- Bullets break Create windows, sails, glass doors and similar blocks (plus some blocks from other Create addons when installed).
 
 ## Building
 

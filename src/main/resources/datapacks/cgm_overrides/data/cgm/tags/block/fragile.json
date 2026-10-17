@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "#cgm:fragile_windows",
+    "#cgm:fragile_sails",
+    "#cgm:fragile_lights",
+    "#cgm:fragile_glass_casings",
+    {
+      "id": "create:fluid_pipe",
+      "required": false
+    },
+    {
+      "id": "create:framed_glass_door",
+      "required": false
+    },
+    {
+      "id": "create:framed_glass_trapdoor",
+      "required": false
+    },
+    {
+      "id": "design_decor:cardboard_box",
+      "required": false
+    },
+    {
+      "id": "vs_clockwork:flap",
+      "required": false
+    },
+    {
+      "id": "vs_clockwork:wing",
+      "required": false
+    }
+  ]
+}
